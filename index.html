@@ -4,26 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Border CSS generator!"/>
+    <meta name="author" content="Iago Virgílio">
+    <meta name="keywords" content="CSS,Generate,Generator,Border,Radius,border-radius">
     <link rel="stylesheet" href="assets/index.css">
     <title>Border Generator</title>
 </head>
 
 <body>
     <div class="flex-border">
+        <h1>Border Radius Genetaror</h1>
         <div>
             <div class="align-input-param">
                 <input type="number" value="0" name="border-top-left" id="border-top-left">
                 <input type="number" value="0" name="border-top-right" id="border-top-right">
             </div>
-            <div id="border">
-                <p id="params-border"></p>
+            <div id="border" class="flex-border">
+                <textarea name="params-border" id="params-border" cols="35" rows="12" readonly></textarea>
             </div>
             <div class="align-input-param">
                 <input type="number" value="0" name="border-botton-left" id="border-botton-left">
                 <input type="number" value="0" name="border-botton-right" id="border-botton-right">
             </div>
         </div>
-        <button>Generate</button>
+        <div>
+            <button id="generate">Generate</button>
+            <button id="copy">Copy</button>
+        </div>
     </div>
 
     <script src="assets/indes.js"></script>

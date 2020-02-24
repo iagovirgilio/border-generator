@@ -3,25 +3,9 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+* {
 	margin: 0;
 	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -29,7 +13,8 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;
+    line-height: 1;
+    background-color: lavender;
 }
 ol, ul {
 	list-style: none;
@@ -47,11 +32,27 @@ table {
 	border-spacing: 0;
 }
 
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance:textfield;
+}
+
+textarea {
+    resize: none;
+}
 
 #border {
-    border: solid 1px black;
+    border: solid 2px dimgray;
     width: 400px;
-    height: 400px;
+    height: 300px;
+    background-color: dimgray;
 }
 
 .flex-border {
@@ -66,4 +67,22 @@ table {
 .align-input-param {
     display: flex;
     justify-content: space-between;
+}
+
+.align-input-param input {
+    width: 2rem;
+    text-align: center;
+    margin: .5rem 0;
+}
+
+button {
+    width: 10rem;
+    height: 3rem;
+    border-radius: 10px;
+    border: transparent;
+    background-color: lightseagreen;
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
 }
